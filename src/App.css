@@ -1,42 +1,99 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@font-face {
+  font-family: 'PP Monument Extended';
+  src: url('src/assets/MonumentExtended-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.logo {
-  height: 6em;
+@font-face {
+  font-family: 'PP Supply Mono';
+  src: url('src/assets/Supply-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #0f0f0f;
+}
+
+html,
+body {
+  font-family: "PP Monument Extended";
+  background: #ffffff;
+}
+
+.nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.logo,
+.nav-item {
   padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  font-weight: 400;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  width: 80%;
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 900;
+  font-size: 10vw;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -0.05em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+a {
+  font-family: "PP Supply Mono";
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
 }
 
-.card {
-  padding: 2em;
+.blocks-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
 }
 
-.read-the-docs {
-  color: #888;
+.row {
+  flex: 1;
+  width: 100%;
+  display: flex;
+}
+
+.block {
+  position: relative;
+  flex: 1;
+  background: #667067;
+  margin: -0.25px;
+}
+
+.transition-in .block {
+  transform-origin: top;
+}
+
+.transition-out .block {
+  transform-origin: bottom;
 }
