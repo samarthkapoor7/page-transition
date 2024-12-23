@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'PP Monument Extended';
-  src: url('src/assets/MonumentExtended-Regular.otf') format('opentype');
+  src: url('./assets/MonumentExtended-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PP Supply Mono';
-  src: url('src/assets/Supply-Regular.otf') format('opentype');
+  src: url('./assets/Supply-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
